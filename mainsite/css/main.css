@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(3, 10, 6);
+}
+.title_of_challenge {
+    font-family: sans-serif;
+    color: rgb(0, 255, 13);
+    font-size: 72px;
+
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.challenge_description {
+    font-family: sans-serif;
+    color: rgb(37, 255, 74);
+    font-size: 24pt;
+    padding-left: 3%;
+    display: flex;
+    flex-flow: row;
+}
+.items {
+    font-family: sans-serif;
+    color: aliceblue;
+    font-size: 28pt;
+    padding-left: 3%;
+    display: flex;
+    flex-flow: row;
+}
+.item {
+    display:contents;
+    padding-right: 3%;
+}
+.block {
+    background-color: rgb(17, 34, 10);
+    padding: 5%;
+    width: 44%;
+    padding-bottom: 30%;
+    margin: auto;
+    outline-color: rgb(0, 255, 64);
+    outline-style: solid;
+    outline-width: 1px;
+}

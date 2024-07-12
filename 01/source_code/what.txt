@@ -1,0 +1,119 @@
+!This program cannot be run in DOS mode.
+.text
+P`.data
+.rdata
+0@.eh_framl	
+0@.bss
+.idata
+.CRT
+.tls
+$AP@
+$(@@
+[^_]
+[^_]
+=`p@
+D$$t
+$Dp@
+$Dp@
+$Dp@
+$Dp@
+$Dp@
+$Dp@
+$Dp@
+$Dp@
+$Dp@
+L[^_]
+L[^_]
+$dR@
+ [^_
+$0R@
+?t?1
+t\VS
+<]ta<
+[^_]
+[^_]
+<]t.<
+[^_]
+,[^_]
+,[^_]
+<]t[
+[^_]
+t(<{t?
+<}t	<,u@
+<{t,
+</t&<\t"
+[^_]
+5dp@
+[^_]
+UWVS
+[^_]
+libgcc_s_dw2-1.dll
+__register_frame_info
+__deregister_frame_info
+libgcj-16.dll
+_Jv_RegisterClasses
+*********************************************************************
+The people who changed our lives the most may never even know
+Something as simple as an invitation to a local for-fun competition
+I took a chance, a small one, and it changed my life forever
+I wonder if he recognizes that impact
+********************************************************************
+Mingw runtime failure:
+  VirtualQuery failed for %d bytes at address %p
+  Unknown pseudo relocation protocol version %d.
+  Unknown pseudo relocation bit size %d.
+glob-1.0-mingw32
+DeleteCriticalSection
+EnterCriticalSection
+ExitProcess
+FindClose
+FindFirstFileA
+FindNextFileA
+FreeLibrary
+GetCommandLineA
+GetLastError
+GetModuleHandleA
+GetProcAddress
+InitializeCriticalSection
+LeaveCriticalSection
+LoadLibraryA
+SetUnhandledExceptionFilter
+TlsGetValue
+VirtualProtect
+VirtualQuery
+_strdup
+_stricoll
+__getmainargs
+__mb_cur_max
+__p__environ
+__p__fmode
+__set_app_type
+_cexit
+_errno
+_fpreset
+_fullpath
+_iob
+_isctype
+_onexit
+_pctype
+_setmode
+abort
+atexit
+calloc
+free
+fwrite
+malloc
+mbstowcs
+memcpy
+printf
+realloc
+setlocale
+signal
+strcoll
+strlen
+tolower
+vfprintf
+wcstombs
+KERNEL32.dll
+msvcrt.dll
+msvcrt.dll

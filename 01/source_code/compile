@@ -1,0 +1,1 @@
+gcc main.c -s -fno-ident -fdata-sections -ffunction-sections -fno-unwind-tables -fno-asynchronous-unwind-tables -flto -Wl,--gc-sections
