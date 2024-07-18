@@ -1,0 +1,22 @@
+1425106760682789556050 = 2 * 3 * 5^2 * 7 * 911 * 1489840322704291
+
+There an integer k, for which for all multiples of that integer nk, F(nk) is even. What number is it?
+What is the greatest common divisor of 
+
+
+202 -> 607 -> 1822 -> 911
+
+
+(2^248 - 1)
+
+7 = xy - x - y
+
+1489840322704291
+
+1,489,849,100,645,643 is a fifth power
+1083^5 - 8,777,941,352
+
+r = 1/sqrt(pi)
+h = 250
+500
+
