@@ -1,0 +1,3 @@
+1425106760682789556050 = 2 * 3 * 5^2 * 7 * 911 * 1489840322704291
+
+There an integer k, for which for all multiples of that integer nk, F(nk) is even. What number is it?
