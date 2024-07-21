@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 currentMoveS;
     private Rigidbody rb;
     void Awake() {
+        PlayerProperties.canMove = false;
         rb = GetComponent<Rigidbody>();
     }
 

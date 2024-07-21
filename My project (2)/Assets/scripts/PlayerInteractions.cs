@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerInteractions : MonoBehaviour
 {
     private Animator cubeAnimator;
+    [SerializeField] private float radius;
+    [SerializeField] private float maxDistance;
 
     void Awake() => cubeAnimator = GetComponent<Animator>();
 
@@ -28,6 +30,13 @@ public class PlayerInteractions : MonoBehaviour
     * Sends the signals to objects that can be interacted with during a flash
     */
     void ActivateObjects() {
-
+        IInteractable interactable;
+        
+        Collider[] results = Physics.OverlapSphere(transform.position, radius, 1 << 3, QueryTriggerInteraction.Collide);
+        foreach (Collider col in results) {
+            if (col.TryGetComponent(out interactable)) {
+                interactable.Trigger();
+            }
+        }
     }
 }
