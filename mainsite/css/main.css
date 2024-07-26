@@ -16,9 +16,11 @@ body {
     flex-flow: row;
     align-items: center;
     justify-content: center;
-    width: 250px;
+    width: fit-content;
     align-self: center;
     text-decoration: none;
+    padding-left: 2%;
+    padding-right: 3%;
 }
 #dl_button:hover {
     background: rgb(65, 97, 133);
@@ -26,8 +28,8 @@ body {
 }
 .file_dl_txt {
     color: rgb(0, 191, 197);
-    padding-left: 3%;
     line-height: 5%;
+    padding-left: 3%;
     text-decoration: none;
 }
 .title_of_challenge {
@@ -45,6 +47,8 @@ body {
 }
 .clickable_text {
     color: rgb(0, 191, 197);
+    text-align: center;
+    align-self: center;
     text-decoration: underline;
 }
 .clickable_text:hover {
@@ -64,8 +68,9 @@ body {
     font-family: sans-serif;
     color: aliceblue;
     font-size: 28pt;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
+    align-items: center;
     display: flex;
     flex-flow: column;
 }
@@ -84,7 +89,7 @@ hr {
     background-color: rgb(10, 26, 34);
     padding: 4%;
     width: 44%;
-    padding-bottom: 30%;
+    height: 1000px;
     margin: auto;
     outline-color: rgb(0, 225, 255);
     outline-style: solid;
