@@ -7,8 +7,31 @@ body {
     flex-flow: column;
     flex-flow: row;
 }
+#dl_button {
+    outline: rgb(114, 189, 255);
+    outline-style: solid;
+    outline-width: 1px;
+    background: rgb(30, 45, 62);
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    align-self: center;
+    text-decoration: none;
+}
+#dl_button:hover {
+    background: rgb(65, 97, 133);
+    cursor: pointer;
+}
+.file_dl_txt {
+    color: rgb(0, 191, 197);
+    padding-left: 3%;
+    line-height: 5%;
+    text-decoration: none;
+}
 .title_of_challenge {
-    font-family: sans-serif;
+    font-family: "Segoe UI";
     color: rgb(0, 195, 255);
     font-size: 72px;
 
@@ -34,7 +57,7 @@ body {
     font-size: 24pt;
     padding-left: 3%;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     text-align: center;
 }
 .items {
