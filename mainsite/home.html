@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>????</title>
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="all">
         <div class="items">
             <div class="item">
-                <a class="clickable_text">Imperfect Past</a>
+                <a class="clickable_text" id="imperfect_past">Imperfect Past</a>
             </div>
             <div class="item">
                 <a class="clickable_text">Where are we Going?</a>
@@ -21,9 +20,9 @@
             </div>
         </div>
         <div class="block">
-            <h1 class="title_of_challenge">CONTROL OF ALL</h1>
+            <h1 class="title_of_challenge" id="challenge_title">CONTROL OF ALL</h1>
             <hr>
-            <p class="challenge_description">MAINTAIN CONTROL</p>
+            <p class="challenge_description" id="description_text">MAINTAIN CONTROL</p>
         </div>
         <div class="items">
             <div class="item">
@@ -36,8 +35,4 @@
     </div>
 </body>
 
-<script>
-    function showElement(element_index) {
-        document.getElementsByName("item").style.visibility = "hidden";
-    }
-</script>
+<script src="js/main.js"></script>
