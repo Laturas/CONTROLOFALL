@@ -1,4 +1,5 @@
 const keyChecker = document.querySelector("#key_submitter");
+const keyField = document.getElementById('key_check');
 var answer = 0;
 
 // Hashing function shamelessly stolen from some guy on StackOverflow lol
@@ -18,18 +19,37 @@ const cyrb53 = (str, seed = 0) => {
 };
 
 keyChecker.addEventListener("click", function() {
-    var val = document.getElementById('key_check').value;
+    var val = keyField.value;
     
     // Uncomment for debugging purposes only
     console.log(val, cyrb53(val));
     if (cyrb53(val) === answer) {
-        console.log("Correct!");
-    } else {console.log("No :(");}
+        rightAnswerFlash();
+    } else {
+        wrongAnswerFlash();
+    }
 });
 
-var form=document.getElementById("key_form");
-function submitForm(event){
+function rightAnswerFlash() {
+    keyField.style.transition = "none";
+    keyField.style.backgroundColor = 'green';
+    setTimeout(() => {
+        keyField.style.transition = "background-color 500ms linear"; 
+        keyField.style.backgroundColor = 'rgb(26, 39, 59)';
+    }, 100);
+}
 
+function wrongAnswerFlash() {
+    keyField.style.transition = "none";
+    keyField.style.backgroundColor = 'red';
+    setTimeout(() => {
+        keyField.style.transition = "background-color 500ms linear"; 
+        keyField.style.backgroundColor = 'rgb(26, 39, 59)';
+    }, 100);
+}
+
+var form=document.getElementById("key_form");
+function submitForm(event) {
    //Preventing page refresh
    event.preventDefault();
 }
@@ -37,13 +57,15 @@ form.addEventListener('submit', submitForm);
 
 document.getElementById('key_check').addEventListener("keypress", function (event) {
     if (event.keyCode == 13) {
-        var val = document.getElementById('key_check').value;
+        var val = keyField.value;
     
         // Uncomment for debugging purposes only
         console.log(val, cyrb53(val));
         if (cyrb53(val) === answer) {
-            console.log("Correct!");
-        } else {console.log("No :(");}
+            rightAnswerFlash();
+        } else {
+            wrongAnswerFlash();
+        }
     }
 });
 
