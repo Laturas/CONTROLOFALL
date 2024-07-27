@@ -23,6 +23,7 @@ imperfectPast.addEventListener("click", function() {
     titleText.textContent = "Imperfect Past";
     
     dlButton.style.display = "none";
+    clearText();
 });
 paranoid.addEventListener("click", function() { // This is the cipher one
     descriptionText.textContent = "They could find out the secret, they have everything they'd need.";
@@ -30,6 +31,8 @@ paranoid.addEventListener("click", function() { // This is the cipher one
     titleText.textContent = "Paranoid";
 
     dlButton.style.display = "none";
+    answer = paranoidKey;
+    clearText();
 });
 powerCube.addEventListener("click", function() {
     descriptionText.textContent = "Power...?";
@@ -37,6 +40,7 @@ powerCube.addEventListener("click", function() {
     titleText.textContent = "The Power to Make It Right";
     //dlButton.style.display = "flex";
     dlButton.style.display = "none";
+    clearText();
 });
 loseItAll.addEventListener("click", function() {
     descriptionText.textContent = "Here I am, still holding on to every word that I say.";
@@ -46,6 +50,8 @@ loseItAll.addEventListener("click", function() {
     dlButton.href = "./Memories.zip";
     document.getElementById("dl_button_img").src="./images/ZipIcon.png";
     dlTxt.textContent = "Memories.zip";
+    answer = breakMeKey;
+    clearText();
 });
 theoremsAndDreams.addEventListener("click", function() {
     descriptionText.textContent = "What if we went down a different path?";
@@ -55,28 +61,37 @@ theoremsAndDreams.addEventListener("click", function() {
     dlButton.href = "./AnotherLife.pdf";
     document.getElementById("dl_button_img").src="./images/PDFicon.png";
     dlTxt.textContent = "AnotherLife.pdf";
+    answer = theoremsAndDreamsKey;
+    clearText();
 });
 connections.addEventListener("click", function() {
     descriptionText.textContent = "It's through our connections we know who we are";
     descriptionText2.textContent = "Find our connection and know what we've lost";
     titleText.textContent = "Connections";
     dlButton.style.display = "none";
+    answer = connectionsKey;
+    clearText();
 });
 imLost.addEventListener("click", function() {
     descriptionText.textContent = "I'm searching for someone... somewhere...";
     descriptionText2.textContent = "(What is the name of the restaurant in the image?)";
     titleText.textContent = "I'm Lost";
     dlButton.style.display = "none";
+    clearText();
 });
 theyKnewMyName.addEventListener("click", function() {
     descriptionText.textContent = "Sometimes you don't need to be the best, you only need to be the first";
     descriptionText2.textContent = "{Geometry Dash Level ID When Released}";
     titleText.textContent = "And They Knew My Name";
     dlButton.style.display = "none";
+    answer = gdKey;
+    clearText();
 });
 behindTheCurtain.addEventListener("click", function() {
     descriptionText.textContent = "Ever wonder how the things we're looking at work?";
     descriptionText2.textContent = "What's going on behind the scenes?";
     titleText.textContent = "Behind the Curtain";
     dlButton.style.display = "none";
+    answer = behindTheCurtainKey;
+    clearText();
 });
