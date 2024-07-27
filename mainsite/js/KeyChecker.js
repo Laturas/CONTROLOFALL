@@ -22,8 +22,10 @@ keyChecker.addEventListener("click", function() {
     var val = keyField.value;
     
     // Uncomment for debugging purposes only
-    console.log(val, cyrb53(val));
+    //console.log(val, cyrb53(val));
+    console.log(answer);
     if (cyrb53(val) === answer) {
+        sendSolutionToBackend(val);
         rightAnswerFlash();
     } else {
         wrongAnswerFlash();
@@ -62,6 +64,7 @@ document.getElementById('key_check').addEventListener("keypress", function (even
         // Uncomment for debugging purposes only
         console.log(val, cyrb53(val));
         if (cyrb53(val) === answer) {
+            sendSolutionToBackend(val);
             rightAnswerFlash();
         } else {
             wrongAnswerFlash();

@@ -17,12 +17,41 @@ const behindTheCurtain = document.querySelector("#behind_the_curtain");
 
 dlButton.style.display = "none";
 
+function getSolutionStatuses() {
+    var xhr = new XMLHttpRequest();
+    //console.log("getting http://localhost:8080/");
+    xhr.onprogress = function() {
+        console.log(JSON.parse(xhr.response).imperfectPastStatus);
+        console.log(xhr.response);
+    };
+    
+    xhr.open("GET", "http://localhost:8080/", true);
+    //xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    xhr.send();
+}
+
+function sendSolutionToBackend(solution) {
+    var xhr = new XMLHttpRequest();
+    //console.log("posting");
+    xhr.onprogress = function() {
+        return;
+    };
+    let link = "http://localhost:8080/" + solution + "/";
+    //console.log("Posting to: " + link);
+    
+    xhr.open("POST", link, true);
+    //xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    xhr.send();
+}
+
 imperfectPast.addEventListener("click", function() {
+    getSolutionStatuses();
     titleText.textContent = "Imperfect Past";
     descriptionText.textContent = "We are constantly changing, constantly improving, making missteps. From our roots are where we sprout.";
     descriptionText2.textContent = "(Hint: What does the URL of this site tell you?)";
     
     dlButton.style.display = "none";
+    answer = imperfectPastKey;
     clearText();
 });
 paranoid.addEventListener("click", function() { // This is the cipher one
