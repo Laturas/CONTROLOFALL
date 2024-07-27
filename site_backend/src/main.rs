@@ -1,23 +1,16 @@
-mod api;
-mod model;
+use actix_web::{get, App, HttpServer, Responder};
 
-use api::task::{
-    get_task
-};
-
-use actix_web::{HttpServer, App, web::Data, middleware::Logger};
+#[get("/")]
+async fn hello() -> impl Responder {
+    "Hello, Actix web!"
+}
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    std::env::set_var("RUST_LOG", "debug");
-    std::env::set_var("RUST_BACKTRACE", "1");
-
-    env_logger::init();
-
-    HttpServer::new(move || {
-        let logger = Logger::default();
-        App::new()
-        .wrap(logger)
-        .service(get_task)
-    }).bind(("127.0.0.1", 80))?.run().await
+    HttpServer::new(|| {
+        App::new().service(hello)
+    })
+        .bind("127.0.0.1:8080")?
+        .run()
+        .await
 }
