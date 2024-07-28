@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (moveVec.magnitude > playerSpeed) {moveVec = moveVec.normalized * playerSpeed;}
         moveVec *= 1 - frictionDecay;
+        if (!Physics.Raycast(transform.position + (moveVec.normalized * 0.6f), Vector3.down, 1f)) {moveVec = Vector3.zero;}
         rb.velocity = moveVec;
     }
 }

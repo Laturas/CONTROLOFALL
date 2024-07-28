@@ -7,7 +7,6 @@ public class PlayerInteractions : MonoBehaviour
 {
     private Animator cubeAnimator;
     [SerializeField] private float radius;
-    [SerializeField] private float maxDistance;
 
     void Awake() => cubeAnimator = GetComponent<Animator>();
 
