@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "image.c"
+#include "image_array"
 
 //int af[5] = [50 72 6F 76 69 64 65 20 61 20 6B 65 79];
 int af[4] = {0x76600250, 0x20600469, 0x65600061, 0x00000A79};
