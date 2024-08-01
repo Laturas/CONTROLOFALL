@@ -14,12 +14,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float playerSpeed;
     [SerializeField] private float playerAccel;
     [SerializeField] private float frictionDecay;
+    [SerializeField] private SO_StartConditions startConds;
     private Vector3 moveVec;
     private Vector3 currentMoveS;
     private Rigidbody rb;
     void Awake() {
         PlayerProperties.canMove = false;
         rb = GetComponent<Rigidbody>();
+        if (startConds.startLocation == SO_StartConditions.StartLocation.None) {
+            transform.position = new Vector3(6.45f,0.5f,24.43f);
+        }
+        else if (startConds.startLocation == SO_StartConditions.StartLocation.Tower) {
+            transform.position = new Vector3(79.7f,0.5f,-267.43f);
+        }
     }
 
 

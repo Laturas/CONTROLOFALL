@@ -6,6 +6,12 @@ public class SO_StartConditions : ScriptableObject
     public enum StartCondition {
         None,
         SkipIntro,
+        BossFight,
     }
     public StartCondition startCondition;
+    public enum StartLocation {
+        None,
+        Tower,
+    }
+    public StartLocation startLocation;
 }

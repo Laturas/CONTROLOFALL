@@ -8,6 +8,7 @@ public class Gate : MonoBehaviour
     private GameObject solidGate;
     public void UpdateState() {
         opened = !opened;
+        Debug.Log(solidGate==null);
         solidGate.SetActive(!opened);
     }
 

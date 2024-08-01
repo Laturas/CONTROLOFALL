@@ -6,7 +6,7 @@ public class DamnNowIGottaWriteCodeIG : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] SO_StartConditions startConditions;
     void Awake() {
-        if (startConditions.startCondition == SkipIntro) {
+        if (startConditions.startCondition != None) {
             TriggerRealStart();
             DestroySelf();
         }
