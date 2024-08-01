@@ -28,11 +28,10 @@ public class SceneManager : MonoBehaviour
                 postProc.SetActive(false);
                 goto case 7;
             case 7:
+            default:
                 scenes[phase].SetActive(false);
                 phase++;
                 scenes[phase].SetActive(true);
-                return;
-            default:
                 return;
         }
     }
