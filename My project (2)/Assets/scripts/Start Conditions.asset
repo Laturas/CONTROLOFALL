@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8f031d497bf2847afba83b0960e187, type: 3}
   m_Name: Start Conditions
   m_EditorClassIdentifier: 
-  startCondition: 2
-  startLocation: 1
+  startCondition: 1
+  startLocation: 0

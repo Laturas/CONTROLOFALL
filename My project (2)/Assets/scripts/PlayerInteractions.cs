@@ -15,6 +15,7 @@ public class PlayerInteractions : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) {
             TriggerFlash();
             ActivateObjects();
+            TryTriggerVault();
         }
     }
 
@@ -35,6 +36,16 @@ public class PlayerInteractions : MonoBehaviour
         foreach (Collider col in results) {
             if (col.TryGetComponent(out interactable)) {
                 interactable.Trigger();
+            }
+        }
+    }
+
+    void TryTriggerVault() {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f, 1 << 6)) {
+            VaultBlock vb;
+            if (hit.transform.gameObject.TryGetComponent(out vb)) {
+                vb.Trigger();
             }
         }
     }

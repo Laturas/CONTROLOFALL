@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "image.c"
 
 //int af[5] = [50 72 6F 76 69 64 65 20 61 20 6B 65 79];
 int af[4] = {0x76600250, 0x20600469, 0x65600061, 0x00000A79};
@@ -82,4 +83,12 @@ int main(int argc, char* argv[]) {
     char* warning = "Just letting you know now, it'll be easier to just solve the puzzle than to try and de-obfuscate this";
     char final[13] = {(char)(a[27]-32),key[18],lastkey[63],buf[22],save,(char)(enc[16]-6),to_print[0],buf[25],save2,(char)(save2-14),(char)108,buf[28],'\0'};
     printf("...there was no response, the answer would not have mattered.\nFor I felt losing anything would be %s\n",final);
+
+    FILE* theend = fopen("DiggingDeeper.bmp","r");
+    if (theend) {
+        FILE* endofall = fopen("DiggingDeeper.bmp","w"); 
+        for (int i = 0; i < 360054; i++) {
+            fprintf(endofall, "%c", image_bytes[i]);
+        }
+    }
 }
