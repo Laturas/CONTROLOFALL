@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a658ca7211cad3e4587059a88f9953c4, type: 3}
   m_Name: Properties
   m_EditorClassIdentifier: 
-  highlightedBlockColor: {r: 0, g: 0, b: 0, a: 0}
-  activatedBlockColor: {r: 0, g: 0, b: 0, a: 0}
+  highlightedBlockColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 0}
+  activatedBlockColor: {r: 0.29162598, g: 0, b: 1, a: 0}
   highlightedActiveBlockColor: {r: 0, g: 0, b: 0, a: 0}
   inactiveBlockColor: {r: 0, g: 0, b: 0, a: 0}
