@@ -26,10 +26,12 @@ public class VaultBlock : MonoBehaviour
     }
     public void Trigger() {
         if (triggered) {
+            EndingChecker.instance.ModifyAndCheck(-changeAmount);
             triggered = false;
             thisMat.material.SetColor("_Color", props.inactiveBlockColor);
             return;
         }
+        EndingChecker.instance.ModifyAndCheck(changeAmount);
         triggered = true;
         thisMat.material.SetColor("_Color", props.activatedBlockColor);
     }
