@@ -14,6 +14,7 @@ const connections = document.querySelector("#connections");
 const imLost = document.querySelector("#im_lost");
 const theyKnewMyName = document.querySelector("#they_knew_my_name");
 const behindTheCurtain = document.querySelector("#behind_the_curtain");
+const putMeBackTogether = document.querySelector("#put_me_back_together");
 
 dlButton.style.display = "none";
 
@@ -122,5 +123,16 @@ behindTheCurtain.addEventListener("click", function() {
     descriptionText2.textContent = "What's going on behind the scenes?";
     dlButton.style.display = "none";
     answer = behindTheCurtainKey;
+    clearText();
+});
+putMeBackTogether.addEventListener("click", function() {
+    titleText.textContent = "Put Me Back Together";
+    descriptionText.textContent = "It wont fix it for you";
+    descriptionText2.textContent = "You still need a real solution";
+    dlButton.style.display = "flex";
+    dlButton.href = "./Arrhythmia.zip";
+    document.getElementById("dl_button_img").src="./images/ZipIcon.png";
+    dlTxt.textContent = "Arrhythmia.zip";
+    answer = putMeBackTogetherKey;
     clearText();
 });
