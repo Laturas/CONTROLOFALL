@@ -1,0 +1,127 @@
+body {
+    background: rgb(11,12,24);
+    background: linear-gradient(0deg, rgb(19, 19, 19) 0%, rgb(0, 0, 0) 15%, rgb(50, 50, 50) 100%); 
+}
+.coverer {
+    opacity: 100%;
+    background-color: black;
+    color: white;
+    font-family: "Segoe UI";
+    text-align: center;
+    font-size: 50pt;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 150%;
+    margin-top: -1%;
+    margin-left: -1%;
+}
+.all {
+    display: flex;
+    flex-flow: column;
+    flex-flow: row;
+}
+input[type=text] {
+    border: 2px solid rgb(182, 182, 182);
+    background-color: rgb(23, 23, 23);
+    border-radius: 4px;
+    font-size: 28pt;
+    margin-top: 10%;
+    color:rgb(100, 100, 100);
+    line-height: 50%;
+    padding: 1% 2% 1% 2%;
+    transition: background-color 500ms linear;
+}
+input[type=button] {
+    border: 2px solid rgb(155, 155, 155);
+    background-color: rgb(32, 32, 32);
+    border-radius: 4px;
+    font-size: 28pt;
+    color:rgb(151, 151, 151);
+    padding: 1% 3% 1% 3%;
+    margin-top: 2%;
+}
+input[type=button]:hover {
+    background-color: rgb(61, 61, 61);
+}
+input[type=button]:active {
+    background-color: rgb(23, 23, 23);
+}
+#dl_button {
+    outline: rgb(255, 255, 255);
+    outline-style: solid;
+    outline-width: 1px;
+    background: rgb(49, 49, 49);
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    align-self: center;
+    text-decoration: none;
+    padding-left: 2%;
+    padding-right: 3%;
+}
+#dl_button:hover {
+    background: rgb(65, 97, 133);
+    cursor: pointer;
+}
+.file_dl_txt {
+    color: rgb(255, 255, 255);
+    line-height: 5%;
+    padding-left: 3%;
+    text-decoration: none;
+}
+.title_of_challenge {
+    font-family: "Segoe UI";
+    color: rgb(146, 146, 146);
+    font-size: 72px;
+
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.challenge_description {
+    font-family: sans-serif;
+    color: rgb(157, 157, 157);
+    font-size: 24pt;
+    padding-left: 3%;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+.items {
+    font-family: sans-serif;
+    color: aliceblue;
+    font-size: 28pt;
+    padding-left: 1%;
+    padding-right: 1%;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+}
+.item {
+    display: flex;
+    padding-top: 13%;
+    color: rgb(255, 255, 255);
+}
+hr {
+    width: 90%
+}
+.block {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: rgb(8, 8, 8);
+    padding: 4%;
+    width: 44%;
+    height: 1000px;
+    margin: auto;
+    outline-color: rgb(255, 255, 255);
+    outline-style: solid;
+    outline-width: 1px;
+}
