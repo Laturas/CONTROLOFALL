@@ -21,8 +21,6 @@ const cyrb53 = (str, seed = 0) => {
 keyChecker.addEventListener("click", function() {
     var val = keyField.value;
     
-    // Uncomment for debugging purposes only
-    //console.log(val, cyrb53(val));
     console.log(answer);
     if (cyrb53(val) === answer) {
         sendSolutionToBackend(val);
@@ -32,6 +30,8 @@ keyChecker.addEventListener("click", function() {
     }
 });
 
+const covererDiv = document.getElementById('coverer_id');
+
 function rightAnswerFlash() {
     keyField.style.transition = "none";
     keyField.style.backgroundColor = 'green';
@@ -39,6 +39,13 @@ function rightAnswerFlash() {
         keyField.style.transition = "background-color 500ms linear"; 
         keyField.style.backgroundColor = 'rgb(23, 23, 23)';
     }, 100);
+    setTimeout(() => {
+        covererDiv.style.opacity = '100%';
+    }, 500);
+    setTimeout(() => {
+        covererDiv.style.color = 'rgb(255, 255, 255)';
+    }, 2000);
+    covererDiv.style.pointerEvents = 'all';
 }
 
 function wrongAnswerFlash() {
