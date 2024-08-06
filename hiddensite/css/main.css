@@ -54,31 +54,6 @@ input[type=button]:hover {
 input[type=button]:active {
     background-color: rgb(23, 23, 23);
 }
-#dl_button {
-    outline: rgb(255, 255, 255);
-    outline-style: solid;
-    outline-width: 1px;
-    background: rgb(49, 49, 49);
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    align-self: center;
-    text-decoration: none;
-    padding-left: 2%;
-    padding-right: 3%;
-}
-#dl_button:hover {
-    background: rgb(65, 97, 133);
-    cursor: pointer;
-}
-.file_dl_txt {
-    color: rgb(255, 255, 255);
-    line-height: 5%;
-    padding-left: 3%;
-    text-decoration: none;
-}
 .title_of_challenge {
     font-family: "Segoe UI";
     color: rgb(146, 146, 146);
@@ -100,24 +75,6 @@ input[type=button]:active {
     display: flex;
     flex-flow: column;
     text-align: center;
-}
-.items {
-    font-family: sans-serif;
-    color: aliceblue;
-    font-size: 28pt;
-    padding-left: 1%;
-    padding-right: 1%;
-    align-items: center;
-    display: flex;
-    flex-flow: column;
-}
-.item {
-    display: flex;
-    padding-top: 13%;
-    color: rgb(255, 255, 255);
-}
-hr {
-    width: 90%
 }
 .block {
     display: flex;
