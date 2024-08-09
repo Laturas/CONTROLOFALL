@@ -60,7 +60,10 @@ paranoid.addEventListener("click", function() { // This is the cipher one
     descriptionText.textContent = "They could find out the secret, they have everything they'd need.";
     descriptionText2.textContent = "I'm not ready for them to know.";
 
-    dlButton.style.display = "none";
+    dlButton.style.display = "flex";
+    dlButton.href = "./ItDiesWithMe.zip";
+    document.getElementById("dl_button_img").src="./images/ZipIcon.png";
+    dlTxt.textContent = "ItDiesWithMe.zip";
     answer = paranoidKey;
     clearText();
 });
@@ -104,9 +107,13 @@ connections.addEventListener("click", function() {
 });
 imLost.addEventListener("click", function() {
     titleText.textContent = "I'm Lost";
-    descriptionText.textContent = "I'm searching for someone... somewhere...";
-    descriptionText2.textContent = "(What is the name of the restaurant in the image?)";
-    dlButton.style.display = "none";
+    descriptionText.textContent = "I just keep searching for someone somewhere";
+    descriptionText2.textContent = "(No key will have a space)";
+    dlButton.style.display = "flex";
+    dlButton.href = "./Tracks.zip";
+    document.getElementById("dl_button_img").src="./images/ZipIcon.png";
+    dlTxt.textContent = "Tracks.zip";
+    answer = imLostKey;
     clearText();
 });
 theyKnewMyName.addEventListener("click", function() {
