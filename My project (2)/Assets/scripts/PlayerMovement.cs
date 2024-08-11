@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.S)) {currentMove += downVec;}
         if (Input.GetKey(KeyCode.D)) {currentMove += rightVec;}
 
+        var dVel = rb.velocity.y;
+
         currentMove = currentMove.normalized;
         currentMove *= playerAccel;
         currentMoveS = currentMove;
@@ -48,5 +50,6 @@ public class PlayerMovement : MonoBehaviour
         moveVec *= 1 - frictionDecay;
         if (!Physics.Raycast(transform.position + (moveVec.normalized * 0.6f), Vector3.down, 1f)) {moveVec = Vector3.zero;}
         rb.velocity = moveVec;
+        rb.velocity = new Vector3(rb.velocity.x,dVel,rb.velocity.z);
     }
 }
