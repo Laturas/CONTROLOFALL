@@ -5,14 +5,20 @@ use actix_web::{
 use std::io::Write;
 use std::fs::{self, File, OpenOptions};
 
-const ELEMENTS: [&str; 9] = ["imperfectPastStatus","breakMeStatus","paranoidStatus","theoremsAndDreamsStatus","powerCubeStatus","connectionsStatus","lostStatus","silentClubstepStatus","curtainStatus"];
-static mut BOOLS: [bool; 9] = [false,false,false,false,false,false,false,false,false]; // Yeah this'll cause a data race, I don't care!
+const ELEMENTS: [&str; 10] = ["imperfectPastStatus","breakMeStatus","paranoidStatus","theoremsAndDreamsStatus","powerCubeStatus","connectionsStatus","lostStatus","silentClubstepStatus","curtainStatus","reconstructedStatus"];
+static mut BOOLS: [bool; 10] = [false,false,false,false,false,false,false,false,false,false]; // Yeah this'll cause a data race, I don't care!
 
 #[get("/")]
 async fn user_info() -> impl Responder {
     let status_list = fs::read_to_string("status_report.json").unwrap();
+    let mut linky = ",\n\"linkylinky\":\"hi.com\"";
+    unsafe {for boo in BOOLS {
+        if !boo {
+            linky = ",\n\"linkylinky\":\"MAINTAINCONTROL\"";
+        }
+    }}
 
-    HttpResponse::Ok().append_header(("Access-Control-Allow-Origin", "*")).body(format!("{{{status_list}}}"))
+    HttpResponse::Ok().append_header(("Access-Control-Allow-Origin", "*")).body(format!("{{{status_list}{linky}}}"))
 }
 
 #[post("/{key}/")]
@@ -26,9 +32,10 @@ async fn attempt_update_key(key: web::Path<String>) -> impl Responder {
         "MATHMAJOR" => 3,
         "{POWERCUBEKEY}" => 4,
         "WeAreRebornWithin" => 5,
-        "{LOSTKEY}" => 6,
+        "SeaLife" => 6,
         "ImHappyIHaveYou" => 7,
         "DoIKnowHowIWork" => 8,
+        "PARANEOPLASTIC" => 9,
         _ => 20
     };
     if index == 20 {return HttpResponse::Ok().body(format!("Nice try :3"));}
