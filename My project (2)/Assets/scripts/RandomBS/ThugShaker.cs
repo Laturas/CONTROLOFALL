@@ -7,7 +7,7 @@ public class ThugShaker : MonoBehaviour
     [SerializeField] private Vector3 originalPositionOverride;
     [SerializeField] private bool overridePos = false;
     public float shakeStrength;
-    void Awake() => originalPosition = Vector3.zero;
+    void Start() {originalPosition = Vector3.zero;}
     
     // Update is called once per frame
     void Update()

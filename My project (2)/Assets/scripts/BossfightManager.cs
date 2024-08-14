@@ -10,9 +10,9 @@ public class BossfightManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (startConditions.startCondition != BossFight) {
-            gameObject.SetActive(false);
-        }
+        //if (startConditions.startCondition != BossFight) {
+        //    gameObject.SetActive(false);
+        //}
         PlayerProperties.canMove = false;
         player.GetComponent<AudioSource>().enabled = false;
     }

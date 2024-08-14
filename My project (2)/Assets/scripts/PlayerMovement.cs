@@ -2,6 +2,7 @@ using UnityEngine;
 
 public static class PlayerProperties {
     public static bool canMove = false;
+    public static bool canFlash = true;
 }
 
 public class PlayerMovement : MonoBehaviour
@@ -18,9 +19,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveVec;
     private Vector3 currentMoveS;
     private Rigidbody rb;
+    public bool ignoreStartConditions;
     void Awake() {
         PlayerProperties.canMove = false;
         rb = GetComponent<Rigidbody>();
+        if (ignoreStartConditions) {return;}
         if (startConds.startLocation == SO_StartConditions.StartLocation.None) {
             transform.position = new Vector3(6.45f,0.5f,24.43f);
         }

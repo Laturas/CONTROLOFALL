@@ -11,7 +11,7 @@ public class EndingChecker : MonoBehaviour
 
     public void ModifyAndCheck(int changeAmount) {
         endValue += changeAmount;
-        if (endValue == 27) {
+        if (endValue == 31) {
             theEnd.SetActive(true);
             deactivateThis.SetActive(false);
         }

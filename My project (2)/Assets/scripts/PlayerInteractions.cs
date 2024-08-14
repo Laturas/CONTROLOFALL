@@ -8,11 +8,15 @@ public class PlayerInteractions : MonoBehaviour
     private Animator cubeAnimator;
     [SerializeField] private float radius;
 
-    void Awake() => cubeAnimator = GetComponent<Animator>();
+    void Awake() {
+        PlayerProperties.canFlash = true; 
+        cubeAnimator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) {
+            if (PlayerProperties.canFlash == false) {return;}
             TriggerFlash();
             ActivateObjects();
             TryTriggerVault();
