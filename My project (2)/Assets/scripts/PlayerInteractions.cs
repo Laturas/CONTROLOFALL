@@ -53,4 +53,12 @@ public class PlayerInteractions : MonoBehaviour
             }
         }
     }
+
+    public GameObject otherPlayer;
+    public GameObject otherReal;
+    void IDontEvenKnow() {
+        otherPlayer.SetActive(true);
+        otherReal.SetActive(true);
+        gameObject.SetActive(false);
+    }
 }
