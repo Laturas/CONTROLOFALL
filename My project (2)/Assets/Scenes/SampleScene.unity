@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ffec2840228e049b5e109e48033e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeAmount: -1
+  changeAmount: 1
   props: {fileID: 11400000, guid: 98625aa7f57c4064db4c1e1c217364f1, type: 2}
   thisMat: {fileID: 0}
   lerpProgress: 0
@@ -3241,7 +3241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ffec2840228e049b5e109e48033e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeAmount: -1
+  changeAmount: 1
   props: {fileID: 11400000, guid: 98625aa7f57c4064db4c1e1c217364f1, type: 2}
   thisMat: {fileID: 0}
   lerpProgress: 0
@@ -3549,7 +3549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &298888068
 Transform:
   m_ObjectHideFlags: 0
@@ -3752,7 +3752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ffec2840228e049b5e109e48033e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeAmount: -1
+  changeAmount: 1
   props: {fileID: 11400000, guid: 98625aa7f57c4064db4c1e1c217364f1, type: 2}
   thisMat: {fileID: 0}
   lerpProgress: 0
@@ -17426,7 +17426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ffec2840228e049b5e109e48033e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeAmount: -1
+  changeAmount: 1
   props: {fileID: 11400000, guid: 98625aa7f57c4064db4c1e1c217364f1, type: 2}
   thisMat: {fileID: 0}
   lerpProgress: 0
@@ -18150,7 +18150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ffec2840228e049b5e109e48033e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeAmount: -1
+  changeAmount: 1
   props: {fileID: 11400000, guid: 98625aa7f57c4064db4c1e1c217364f1, type: 2}
   thisMat: {fileID: 0}
   lerpProgress: 0
@@ -18991,7 +18991,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0d71fe8c55ffed14f82888e18d403900, type: 2}
+  - {fileID: 2100000, guid: f70ae7c5b6598ff42922c1dcc13edc94, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19844,7 +19844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1304849081
 Transform:
   m_ObjectHideFlags: 0
@@ -20546,7 +20546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!135 &1394350431
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21201,7 +21201,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0d71fe8c55ffed14f82888e18d403900, type: 2}
+  - {fileID: 2100000, guid: f70ae7c5b6598ff42922c1dcc13edc94, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21332,7 +21332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ffec2840228e049b5e109e48033e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeAmount: -1
+  changeAmount: 1
   props: {fileID: 11400000, guid: 98625aa7f57c4064db4c1e1c217364f1, type: 2}
   thisMat: {fileID: 0}
   lerpProgress: 0
@@ -21927,7 +21927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ffec2840228e049b5e109e48033e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeAmount: -1
+  changeAmount: 1
   props: {fileID: 11400000, guid: 98625aa7f57c4064db4c1e1c217364f1, type: 2}
   thisMat: {fileID: 0}
   lerpProgress: 0
@@ -23140,7 +23140,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0d71fe8c55ffed14f82888e18d403900, type: 2}
+  - {fileID: 2100000, guid: f70ae7c5b6598ff42922c1dcc13edc94, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23561,7 +23561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ffec2840228e049b5e109e48033e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeAmount: -1
+  changeAmount: 1
   props: {fileID: 11400000, guid: 98625aa7f57c4064db4c1e1c217364f1, type: 2}
   thisMat: {fileID: 0}
   lerpProgress: 0
@@ -25089,7 +25089,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ffec2840228e049b5e109e48033e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeAmount: -1
+  changeAmount: 1
   props: {fileID: 11400000, guid: 98625aa7f57c4064db4c1e1c217364f1, type: 2}
   thisMat: {fileID: 0}
   lerpProgress: 0
@@ -26771,7 +26771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!33 &1839906501
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26789,7 +26789,7 @@ BoxCollider:
   m_GameObject: {fileID: 1839906500}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -27038,7 +27038,7 @@ SphereCollider:
   m_GameObject: {fileID: 1839906500}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.63
   m_Center: {x: 0, y: 0.15, z: 0}
@@ -28878,7 +28878,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975296614}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -35120,7 +35120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ffec2840228e049b5e109e48033e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeAmount: -1
+  changeAmount: 1
   props: {fileID: 11400000, guid: 98625aa7f57c4064db4c1e1c217364f1, type: 2}
   thisMat: {fileID: 0}
   lerpProgress: 0
