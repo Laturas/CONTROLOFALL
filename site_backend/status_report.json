@@ -1,9 +1,10 @@
 "imperfectPastStatus":"solved",
-"breakMeStatus":"unsolved",
+"breakMeStatus":"solved",
 "paranoidStatus":"solved",
-"theoremsAndDreamsStatus":"unsolved",
+"theoremsAndDreamsStatus":"solved",
 "powerCubeStatus":"unsolved",
 "connectionsStatus":"unsolved",
-"lostStatus":"unsolved",
+"lostStatus":"solved",
 "silentClubstepStatus":"unsolved",
-"curtainStatus":"unsolved"
+"curtainStatus":"unsolved",
+"reconstructedStatus":"unsolved"

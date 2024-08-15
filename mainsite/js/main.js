@@ -18,19 +18,6 @@ const putMeBackTogether = document.querySelector("#put_me_back_together");
 
 dlButton.style.display = "none";
 
-function getSolutionStatuses() {
-    var xhr = new XMLHttpRequest();
-    //console.log("getting http://localhost:8080/");
-    xhr.onprogress = function() {
-        console.log(JSON.parse(xhr.response).imperfectPastStatus);
-        console.log(xhr.response);
-    };
-    
-    xhr.open("GET", "http://localhost:8080/", true);
-    //xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-    xhr.send();
-}
-
 function sendSolutionToBackend(solution) {
     var xhr = new XMLHttpRequest();
     //console.log("posting");
@@ -54,6 +41,7 @@ imperfectPast.addEventListener("click", function() {
     dlButton.style.display = "none";
     answer = imperfectPastKey;
     clearText();
+    getSolutionStatuses();
 });
 paranoid.addEventListener("click", function() { // This is the cipher one
     titleText.textContent = "Paranoid";
@@ -66,6 +54,7 @@ paranoid.addEventListener("click", function() { // This is the cipher one
     dlTxt.textContent = "ItDiesWithMe.zip";
     answer = paranoidKey;
     clearText();
+    getSolutionStatuses();
 });
 powerCube.addEventListener("click", function() {
     titleText.textContent = "The Power to Make It Right";
@@ -74,6 +63,7 @@ powerCube.addEventListener("click", function() {
     //dlButton.style.display = "flex";
     dlButton.style.display = "none";
     clearText();
+    getSolutionStatuses();
 });
 loseItAll.addEventListener("click", function() {
     titleText.textContent = "BREAK ME";
@@ -85,6 +75,7 @@ loseItAll.addEventListener("click", function() {
     dlTxt.textContent = "Memories.zip";
     answer = breakMeKey;
     clearText();
+    getSolutionStatuses();
 });
 theoremsAndDreams.addEventListener("click", function() {
     titleText.textContent = "Theorems and Dreams";
@@ -96,6 +87,7 @@ theoremsAndDreams.addEventListener("click", function() {
     dlTxt.textContent = "AnotherLife.pdf";
     answer = theoremsAndDreamsKey;
     clearText();
+    getSolutionStatuses();
 });
 connections.addEventListener("click", function() {
     titleText.textContent = "Connections";
@@ -104,6 +96,7 @@ connections.addEventListener("click", function() {
     dlButton.style.display = "none";
     answer = connectionsKey;
     clearText();
+    getSolutionStatuses();
 });
 imLost.addEventListener("click", function() {
     titleText.textContent = "I'm Lost";
@@ -115,6 +108,7 @@ imLost.addEventListener("click", function() {
     dlTxt.textContent = "Tracks.zip";
     answer = imLostKey;
     clearText();
+    getSolutionStatuses();
 });
 theyKnewMyName.addEventListener("click", function() {
     titleText.textContent = "And They Knew My Name";
@@ -123,6 +117,7 @@ theyKnewMyName.addEventListener("click", function() {
     dlButton.style.display = "none";
     answer = gdKey;
     clearText();
+    getSolutionStatuses();
 });
 behindTheCurtain.addEventListener("click", function() {
     titleText.textContent = "Behind the Curtain";
@@ -131,6 +126,7 @@ behindTheCurtain.addEventListener("click", function() {
     dlButton.style.display = "none";
     answer = behindTheCurtainKey;
     clearText();
+    getSolutionStatuses();
 });
 putMeBackTogether.addEventListener("click", function() {
     titleText.textContent = "Put Me Back Together";
@@ -142,4 +138,34 @@ putMeBackTogether.addEventListener("click", function() {
     dlTxt.textContent = "Arrhythmia.zip";
     answer = putMeBackTogetherKey;
     clearText();
+    getSolutionStatuses();
 });
+
+const solvedColor = "rgb(32, 51, 81)";
+
+function getSolutionStatuses() {
+    var xhr = new XMLHttpRequest();
+    //console.log("getting http://localhost:8080/");
+    xhr.onprogress = function() {
+        let a = JSON.parse(xhr.response);
+        console.log(a.imperfectPastStatus);
+        //console.log(xhr.response);
+        if (a.imperfectPastStatus === "solved") {imperfectPast.style.color = solvedColor;}
+        if (a.breakMeStatus === "solved") {loseItAll.style.color = solvedColor;}
+        if (a.paranoidStatus === "solved") {paranoid.style.color = solvedColor;}
+        if (a.theoremsAndDreamsStatus === "solved") {theoremsAndDreams.style.color = solvedColor;}
+        if (a.powerCubeStatus === "solved") {powerCube.style.color = solvedColor;}
+        if (a.connectionsStatus === "solved") {connections.style.color = solvedColor;}
+        if (a.lostStatus === "solved") {imLost.style.color = solvedColor;}
+        if (a.silentClubstepStatus === "solved") {theyKnewMyName.style.color = solvedColor;}
+        if (a.curtainStatus === "solved") {behindTheCurtain.style.color = solvedColor;}
+        if (a.reconstructedStatus === "solved") {putMeBackTogether.style.color = solvedColor;}
+        //return JSON.parse(xhr.response);
+    };
+    
+    xhr.open("GET", "http://localhost:8080/", true);
+    //xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    xhr.send();
+}
+
+getSolutionStatuses();
