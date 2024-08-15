@@ -147,19 +147,21 @@ function getSolutionStatuses() {
     var xhr = new XMLHttpRequest();
     //console.log("getting http://localhost:8080/");
     xhr.onprogress = function() {
+        let everythingSolved = false;
         let a = JSON.parse(xhr.response);
         console.log(a.imperfectPastStatus);
         //console.log(xhr.response);
-        if (a.imperfectPastStatus === "solved") {imperfectPast.style.color = solvedColor;}
-        if (a.breakMeStatus === "solved") {loseItAll.style.color = solvedColor;}
-        if (a.paranoidStatus === "solved") {paranoid.style.color = solvedColor;}
-        if (a.theoremsAndDreamsStatus === "solved") {theoremsAndDreams.style.color = solvedColor;}
-        if (a.powerCubeStatus === "solved") {powerCube.style.color = solvedColor;}
-        if (a.connectionsStatus === "solved") {connections.style.color = solvedColor;}
-        if (a.lostStatus === "solved") {imLost.style.color = solvedColor;}
-        if (a.silentClubstepStatus === "solved") {theyKnewMyName.style.color = solvedColor;}
-        if (a.curtainStatus === "solved") {behindTheCurtain.style.color = solvedColor;}
-        if (a.reconstructedStatus === "solved") {putMeBackTogether.style.color = solvedColor;}
+        if (a.imperfectPastStatus === "solved") {imperfectPast.style.color = solvedColor;} else {everythingSolved = false;}
+        if (a.breakMeStatus === "solved") {loseItAll.style.color = solvedColor;} else {everythingSolved = false;}
+        if (a.paranoidStatus === "solved") {paranoid.style.color = solvedColor;} else {everythingSolved = false;}
+        if (a.theoremsAndDreamsStatus === "solved") {theoremsAndDreams.style.color = solvedColor;} else {everythingSolved = false;}
+        if (a.powerCubeStatus === "solved") {powerCube.style.color = solvedColor;} else {everythingSolved = false;}
+        if (a.connectionsStatus === "solved") {connections.style.color = solvedColor;} else {everythingSolved = false;}
+        if (a.lostStatus === "solved") {imLost.style.color = solvedColor;} else {everythingSolved = false;}
+        if (a.silentClubstepStatus === "solved") {theyKnewMyName.style.color = solvedColor;} else {everythingSolved = false;}
+        if (a.curtainStatus === "solved") {behindTheCurtain.style.color = solvedColor;} else {everythingSolved = false;}
+        if (a.reconstructedStatus === "solved") {putMeBackTogether.style.color = solvedColor;} else {everythingSolved = false;}
+        if (everythingSolved === true) {console.log("You win ig");}
         //return JSON.parse(xhr.response);
     };
     
