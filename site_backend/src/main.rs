@@ -24,6 +24,9 @@ async fn user_info() -> impl Responder {
 #[post("/{key}/")]
 async fn attempt_update_key(key: web::Path<String>) -> impl Responder {
     let key = key.into_inner();
+    if key == "NeverHoldingBack" {
+        return HttpResponse::Ok().append_header(("Access-Control-Allow-Origin", "*")).body(format!("FinalLink"));
+    }
     println!("{}",key);
     let index: usize = match key.as_str() {
         "MemoryMerge" => 0,
