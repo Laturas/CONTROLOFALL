@@ -30,7 +30,7 @@ public class FakeEnd : MonoBehaviour
     }
     void LateUpdate() {
         if (!started) {return;}
-        if (cays == 5) {neverDieParticles.SetActive(false); cays++; return;}
+        if (cays == 5) {neverDieParticles.SetActive(false); thisAud.enabled = false; cays++; return;}
         if (cays == 6) {return;}
 
         timers[cays] -= Time.deltaTime;

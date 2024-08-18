@@ -24,7 +24,7 @@ function sendSolutionToBackend(solution) {
     xhr.onprogress = function() {
         return;
     };
-    let link = "http://localhost:8080/" + solution + "/";
+    let link = "http://127.0.0.1:8080/" + solution + "/";
     //console.log("Posting to: " + link);
     
     xhr.open("POST", link, true);
@@ -60,8 +60,11 @@ powerCube.addEventListener("click", function() {
     titleText.textContent = "The Power to Make It Right";
     descriptionText.textContent = "Power...?";
     descriptionText2.textContent = "";
-    //dlButton.style.display = "flex";
-    dlButton.style.display = "none";
+    dlButton.style.display = "flex";
+    dlButton.href = "./PowerCube.zip";
+    document.getElementById("dl_button_img").src="./images/ZipIcon.png";
+    dlTxt.textContent = "PowerCube.zip";
+    answer = powerCubeKey;
     clearText();
     getSolutionStatuses();
 });
@@ -103,9 +106,9 @@ imLost.addEventListener("click", function() {
     descriptionText.textContent = "I just keep searching for someone somewhere";
     descriptionText2.textContent = "(No key will have a space)";
     dlButton.style.display = "flex";
-    dlButton.href = "./Tracks.zip";
+    dlButton.href = "./WeAreAll.zip";
     document.getElementById("dl_button_img").src="./images/ZipIcon.png";
-    dlTxt.textContent = "Tracks.zip";
+    dlTxt.textContent = "WeAreAll.zip";
     answer = imLostKey;
     clearText();
     getSolutionStatuses();
@@ -113,7 +116,7 @@ imLost.addEventListener("click", function() {
 theyKnewMyName.addEventListener("click", function() {
     titleText.textContent = "And They Knew My Name";
     descriptionText.textContent = "Sometimes you don't need to be the best, you only need to be the first";
-    descriptionText2.textContent = "{Geometry Dash Level ID When Released}";
+    descriptionText2.textContent = "{Ok so my bad I may be stupid. I forgot to make a copy of the thing for this before everything was supposed to go live. If I don't fix it in time I'll just give the solution}";
     dlButton.style.display = "none";
     answer = gdKey;
     clearText();
@@ -165,7 +168,7 @@ function getSolutionStatuses() {
         //return JSON.parse(xhr.response);
     };
     
-    xhr.open("GET", "http://localhost:8080/", true);
+    xhr.open("GET", "http://127.0.0.1:8080/", true);
     //xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
     xhr.send();
 }

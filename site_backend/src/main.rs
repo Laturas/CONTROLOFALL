@@ -33,7 +33,7 @@ async fn attempt_update_key(key: web::Path<String>) -> impl Responder {
         "LosingMyself" => 1,
         "RUNNINGINCIRCLES" => 2,
         "MATHMAJOR" => 3,
-        "{POWERCUBEKEY}" => 4,
+        "PowerlessObject" => 4,
         "WeAreRebornWithin" => 5,
         "SeaLife" => 6,
         "ImHappyIHaveYou" => 7,

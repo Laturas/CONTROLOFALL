@@ -22,7 +22,7 @@ keyChecker.addEventListener("click", function() {
     var val = keyField.value;
     
     // Uncomment for debugging purposes only
-    //console.log(val, cyrb53(val));
+    console.log(val, cyrb53(val));
     console.log(answer);
     if (cyrb53(val) === answer) {
         sendSolutionToBackend(val);

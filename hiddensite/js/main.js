@@ -4,6 +4,7 @@ const titleText = document.querySelector("#challenge_title");
 
 const dlButton = document.querySelector("#dl_button");
 const dlTxt = document.querySelector("#dl_txt_id");
+const coverer = document.querySelector("#coverer_id");
 
 dlButton.style.display = "none";
 
@@ -24,6 +25,7 @@ function sendSolutionToBackend(solution) {
     var xhr = new XMLHttpRequest();
     //console.log("posting");
     xhr.onprogress = function() {
+        coverer.textContent = xhr.response;
         return;
     };
     let link = "http://localhost:8080/" + solution + "/";
