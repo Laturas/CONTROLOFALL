@@ -1,0 +1,147 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>????</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="all">
+        <div class="coverer" id="coverer_id">
+            <p>What</p>
+        </div>
+        <div class="block">
+            <h1 class="title_of_challenge" id="challenge_title">Reunification</h1>
+            <div class="challenge_description">
+                <p id="description_text_segment_1">A doorway to somewhere...</p>
+                <img src="./.png" width="500" height="500"></img>
+                <form autocomplete="off" id="key_form">
+                    <input type="text" id="key_check"> <br>
+                    <input type="button" value="Check" id="key_submitter">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+const reunification = 170893535408492;
+</script>
+
+<script>
+    const keyChecker = document.querySelector("#key_submitter");
+const keyField = document.getElementById('key_check');
+var answer = reunification;
+
+// Hashing function shamelessly stolen from some guy on StackOverflow lol
+const cyrb53 = (str, seed = 0) => {
+    let h1 = 0xdeadbeef ^ seed, h2 = 0x41c6ce57 ^ seed;
+    for(let i = 0, ch; i < str.length; i++) {
+        ch = str.charCodeAt(i);
+        h1 = Math.imul(h1 ^ ch, 2654435761);
+        h2 = Math.imul(h2 ^ ch, 1597334677);
+    }
+    h1  = Math.imul(h1 ^ (h1 >>> 16), 2246822507);
+    h1 ^= Math.imul(h2 ^ (h2 >>> 13), 3266489909);
+    h2  = Math.imul(h2 ^ (h2 >>> 16), 2246822507);
+    h2 ^= Math.imul(h1 ^ (h1 >>> 13), 3266489909);
+  
+    return 4294967296 * (2097151 & h2) + (h1 >>> 0);
+};
+
+keyChecker.addEventListener("click", function() {
+    var val = keyField.value;
+    
+    console.log(answer);
+    if (cyrb53(val) === answer) {
+        sendSolutionToBackend(val);
+        rightAnswerFlash();
+    } else {
+        wrongAnswerFlash();
+    }
+});
+
+const covererDiv = document.getElementById('coverer_id');
+
+function rightAnswerFlash() {
+    keyField.style.transition = "none";
+    keyField.style.backgroundColor = 'green';
+    setTimeout(() => {
+        keyField.style.transition = "background-color 500ms linear"; 
+        keyField.style.backgroundColor = 'rgb(23, 23, 23)';
+    }, 100);
+}
+
+function wrongAnswerFlash() {
+    keyField.style.transition = "none";
+    keyField.style.backgroundColor = 'red';
+    setTimeout(() => {
+        keyField.style.transition = "background-color 500ms linear"; 
+        keyField.style.backgroundColor = 'rgb(23, 23, 23)';
+    }, 100);
+}
+
+var form=document.getElementById("key_form");
+function submitForm(event) {
+   //Preventing page refresh
+   event.preventDefault();
+}
+form.addEventListener('submit', submitForm);
+
+document.getElementById('key_check').addEventListener("keypress", function (event) {
+    if (event.keyCode == 13) {
+        var val = keyField.value;
+    
+        // Uncomment for debugging purposes only
+        console.log(val, cyrb53(val));
+        if (cyrb53(val) === answer) {
+            sendSolutionToBackend(val);
+            rightAnswerFlash();
+        } else {
+            wrongAnswerFlash();
+        }
+    }
+});
+
+function clearText() {
+    document.getElementById('key_check').value = "";
+}
+</script>
+<script>
+    const descriptionText = document.querySelector("#description_text_segment_1");
+const descriptionText2 = document.querySelector("#description_text_segment_2");
+const titleText = document.querySelector("#challenge_title");
+
+const dlButton = document.querySelector("#dl_button");
+const dlTxt = document.querySelector("#dl_txt_id");
+
+dlButton.style.display = "none";
+
+function getSolutionStatuses() {
+    var xhr = new XMLHttpRequest();
+    //console.log("getting http://localhost:8080/");
+    xhr.onprogress = function() {
+        console.log(JSON.parse(xhr.response).imperfectPastStatus);
+        console.log(xhr.response);
+    };
+    
+    xhr.open("GET", "http://localhost:8080/", true);
+    //xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    xhr.send();
+}
+
+function sendSolutionToBackend(solution) {
+    var xhr = new XMLHttpRequest();
+    //console.log("posting");
+    xhr.onprogress = function() {
+        return;
+    };
+    let link = "http://localhost:8080/" + solution + "/";
+    //console.log("Posting to: " + link);
+    
+    xhr.open("POST", link, true);
+    //xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    xhr.send();
+}
+</script>
